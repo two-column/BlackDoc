@@ -1,13 +1,13 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      rouge
+#theme: minima
+#markdown: kramdown
+markdown: CommonMarkGhPages
 
 # Setup
 title:            BlackDoc
 tagline:          Black Theme for Jekyll
 description:      "A two-column black theme with a scrolling sidebar. Ideal for sites requiring a master-detail layout, e.g. documentation, cheatsheets, lyrics, notes..."
-url:              https://github.com/karloespiritu/blackdoc
-baseurl:          /
+url:              /
+baseurl:          /BlackDoc/
                   # the optional subpath of your site, e.g. "/my-jekyll-site/"
                   # This will apply to all pages in your Jekyll site.
 
@@ -15,17 +15,49 @@ author:
   name:           Karlo Espiritu
   url:            https://twitter.com/karloespiritu
 
-paginate:         5
-# paginate_path:    '/page:num'
-                    # Or '/my-jekyll-site/page:num' if you want to move your index pages
-
-plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-
 # Custom vars
 version:            2.0.1
 
 github:
-  repo:             https://github.com/karloespiritu/blackdoc
+  repo:             https://github.com/twocolumn/BlackDoc
+
+plugins:
+  - jekyll-avatar
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  - jekyll-default-layout
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-mentions
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-redirect-from
+  - jekyll-relative-links
+  - jekyll-remote-theme          # brilliant
+  - jekyll-sass-converter        # https://jekyllrb.com/docs/assets/
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
+
+
+# jekyll-commonmark-ghpages
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+
+# jekyll-mentions
+jekyll-mentions:
+  base_url: https://twitter.com
+
+# jekyll-optional-front-matter
+include:
+  - docs/CONTRIBUTING.md
+
+# jekyll-paginate
+paginate:         1
+paginate_path:    '/:num'
+
+# jekyll-remote-theme
+#remote_theme: esovm/minima
